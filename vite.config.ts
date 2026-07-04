@@ -5,6 +5,11 @@ import legacy from "@vitejs/plugin-legacy";
 
 export default defineConfig({
   base: "/kindle-dashboard/",
+  build: {
+    target: "es2015",
+    cssTarget: "chrome61",
+    modulePreload: false,
+  },
   plugins: [
     react(),
     tailwindcss(),
