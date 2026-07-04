@@ -13,23 +13,20 @@ export function Dashboard() {
   const [weather, setWeather] = useState(fallbackWeather);
 
   useEffect(() => {
-    const controller = new AbortController();
-
-    const refreshWeather = async () => {
-      try {
-        setWeather(await getWeather(undefined, controller.signal));
-      } catch (error) {
-        console.warn(error);
-      }
-    };
-
-    void refreshWeather();
-    const intervalId = window.setInterval(refreshWeather, weatherRefreshMs);
-
-    return () => {
-      controller.abort();
-      window.clearInterval(intervalId);
-    };
+    // const controller = new AbortController();
+    // const refreshWeather = async () => {
+    //   try {
+    //     setWeather(await getWeather(undefined, controller.signal));
+    //   } catch (error) {
+    //     console.warn(error);
+    //   }
+    // };
+    // void refreshWeather();
+    // const intervalId = window.setInterval(refreshWeather, weatherRefreshMs);
+    // return () => {
+    //   controller.abort();
+    //   window.clearInterval(intervalId);
+    // };
   }, []);
 
   return (
