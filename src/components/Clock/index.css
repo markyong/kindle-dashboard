@@ -1,0 +1,44 @@
+.clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.clock-time {
+  font-size: 5rem;
+  font-size: clamp(5rem, 22vw, 8rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #000;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+.clock-date {
+  margin-top: 1.25rem;
+  font-size: 1rem;
+  font-size: clamp(1rem, 3vw, 1.35rem);
+  font-weight: 500;
+  line-height: 1.35;
+  color: #666;
+}
+
+@media (min-width: 700px) {
+  .clock {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .clock-time {
+    font-size: 5.75rem;
+    font-size: clamp(5.75rem, 10vw, 8.75rem);
+  }
+
+  .clock-date {
+    margin-top: 1.5rem;
+    font-size: 1.05rem;
+    font-size: clamp(1.05rem, 1.8vw, 1.45rem);
+  }
+}
