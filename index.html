@@ -1,13 +1,54 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="light" />
-    <title>Kindle Dashboard</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light" />
+  <title>Kindle Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main class="dashboard">
+    <div class="dashboard-inner">
+      <div class="clock-section">
+        <section class="clock kindle-fade">
+          <time class="clock-time" id="clock-time"></time>
+          <p class="clock-date" id="clock-date"></p>
+        </section>
+      </div>
+
+      <div class="divider" aria-hidden="true"></div>
+
+      <div class="right-column">
+        <div class="weather-wrapper">
+          <section class="weather kindle-fade">
+            <div class="weather-main">
+              <span id="weather-icon" aria-hidden="true"></span>
+              <div class="weather-temp-container">
+                <p class="weather-temp" id="weather-temp">27</p>
+                <span class="weather-degree">&deg;</span>
+              </div>
+            </div>
+            <p class="weather-condition" id="weather-condition">Sunny</p>
+            <p class="weather-feels" id="weather-feels">Feels like 29&deg;</p>
+          </section>
+        </div>
+
+        <div class="inner-divider" aria-hidden="true"></div>
+
+        <div class="quote-wrapper">
+          <figure class="quote kindle-fade">
+            <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+            <blockquote class="quote-text" id="quote-text"></blockquote>
+            <figcaption class="quote-author" id="quote-author"></figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+
 </html>
